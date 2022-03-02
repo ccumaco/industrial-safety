@@ -26,7 +26,7 @@
     left:0;
     width:100%;
     height:100%;
-    background: #FECE1A;
+    background: #F5A01F;
     opacity:0.85;
     filter: alpha(opacity=85);
 }
@@ -78,7 +78,7 @@
 .da-slide h4{
     color: #181A1C;
     text-transform:uppercase;
-      white-space: nowrap;
+      /* white-space: nowrap; */
     z-index: 10;
 }
 .da-slide h2 {

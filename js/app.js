@@ -371,14 +371,17 @@ $("#send-mail").click(function () {
             });
         }
     });
+    setTimeout(function () {
+        $('.filter')[1].click();
+    }, 1000);
 });
 
 //Initialize google map for contact setion with your location.
 
 function initializeMap() {
 
-    var lat = '44.8164056'; //Set your latitude.
-    var lon = '20.46090424'; //Set your longitude.
+    var lat = '4.765943'; //Set your latitude.
+    var lon = '-74.030468'; //Set your longitude.
 
     var centerLon = lon - 0.0105;
 
@@ -400,12 +403,12 @@ function initializeMap() {
     });
 
     var infowindow = new google.maps.InfoWindow({
-        content: "Your content goes here!"
+        content: "Nuestra sede"
     });
 
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.open(map, marker);
     });
 
-    infowindow.open(map, marker);
+    // infowindow.open(map, marker);
 }
