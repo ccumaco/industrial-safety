@@ -9,17 +9,18 @@ if (!empty($_POST)){
   $_POST  = multiDimensionalArrayMap('cleanData', $_POST);
 
   //your email adress 
-  $emailTo ="eppindusaf@gmail.com"; //"yourmail@yoursite.com";
+  $emailTo ="carloscumaco5@gmail.com"; //"yourmail@yoursite.com";
 
   //from email adress
-  $emailFrom ="contact@yoursite.com"; //"contact@yoursite.com";
+  $emailFrom ="prueba@corre.com"; //"contact@yoursite.com";
 
   //email subject
-  $emailSubject = "Mail from Porta";
+  $emailSubject = "EPP industrial Safety";
 
   $name = $_POST["name"];
   $email = $_POST["email"];
   $comment = $_POST["comment"];
+  $phone = $_POST["phone"];
   if($name == "")
    $data['success'] = false;
  
@@ -27,14 +28,18 @@ if (!empty($_POST)){
    $data['success'] = false;
 
 
+ if(strlen($comment) < 10 || strlen($comment) > 11)
+   $data['success'] = false;
+
  if($comment == "")
    $data['success'] = false;
 
  if($data['success'] == true){
 
-  $message = "NAME: $name<br>
-  EMAIL: $email<br>
-  COMMENT: $comment";
+  $message = "Nombre: $name<br>
+  Correo: $email<br>
+  número: $email<br>
+  Mensaje: $comment";
 
 
   $headers = "MIME-Version: 1.0" . "\r\n"; 

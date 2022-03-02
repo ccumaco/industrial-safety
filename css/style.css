@@ -257,7 +257,7 @@ p {
     z-index:4;
 }
 .thumbnail h3 {
-    color: #F5A01F;
+    color: #fff;
     margin-top:10px;
     font-size:20px;
 }
@@ -332,6 +332,32 @@ p {
     color: #FFF;
     font-weight: lighter;
 }
+.fixed-whatsapp{
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 50%;
+    background-color: green;
+    box-sizing: content-box;
+    z-index: 9999;
+}
+.icon-instagram-circle::before{
+    content: "";
+    background: url(./../images/instagram.png) no-repeat center center;
+    background-size: 35px;
+    background-position-y: 5px;
+    width: 50px;
+    height: 40px;
+}
+.icon-instagram-circle:hover{
+    background: #000;
+}
+.icon-instagram-circle{
+    width: 80px !important;
+    height: 80px !important;
+    background: #fff;
+    border-radius: 50%;
+}
 .primary-section {
     background:#071A2B;
 }
@@ -341,7 +367,13 @@ p {
 .primary-section .title {
     border-bottom: 1px solid #FFF;
 }
-.primary-section, .primary-section .title p, .primary-section h3 {
+.primary-section .title p{
+    color:#FFF;
+}
+.primary-section h3{
+    color: #fff;
+}
+.primary-section {
     color: #F5A01F;
 }
 .primary-section h1 {

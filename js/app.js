@@ -205,6 +205,18 @@ $("#send-mail").click(function () {
             });
             error = true; // change the error state to true
         }
+        var name = $('input#name').val(); // get the value of the input field
+        var phone = $('input#phone').val(); // get the value of the input field
+        if (phone.length < 10 || phone == "" || phone == " ") {
+            $('#err-phone').show(500);
+            $('#err-phone').delay(4000);
+            $('#err-phone').animate({
+                height: 'toggle'
+            }, 500, function () {
+                // Animation complete.
+            });
+            error = true; // change the error state to true
+        }
 
         var emailCompare = /^([a-z0-9_.-]+)@([da-z.-]+).([a-z.]{2,6})$/; // Syntax to compare against input
         var email = $('input#email').val().toLowerCase(); // get the value of the input field
@@ -248,6 +260,7 @@ $("#send-mail").click(function () {
                         $('#successSend').show();
                         $("#name").val('');
                         $("#email").val('');
+                        $("#phone").val('');
                         $("#comment").val('');
                     } else {
                         $('#errorSend').show();
