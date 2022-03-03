@@ -2,7 +2,12 @@
 
 if($_POST){
 
-    $fileName = 'newsletter.txt'; //set 777 permision for this file. 
+    //your email adress 
+    $emailTo ="carloscumaco5@gmail.com"; //"yourmail@yoursite.com";
+
+    //from email adress   
+    // $fileName = 'newsletter.txt'; //set 777 permision for this file. 
+    $emailSubject = "EPP industrial Safety";
     $error = false;
     
     $email = $_POST['email'];
@@ -13,9 +18,14 @@ if($_POST){
     
     //If all ok, save emali adress in file
     if($error == false){
-        $file = fopen($fileName, a);
-        fwrite($file, "$email,");
-        fclose($file);
+        $message = "
+        Alguien con el correo: $email desea obtener informacion.<br>";
+      
+      
+        $headers = "MIME-Version: 1.0" . "\r\n"; 
+        $headers .= "Content-type:text/html; charset=utf-8" . "\r\n"; 
+        $headers .= "From: <EPP industrial safety>" . "\r\n";
+        mail($emailTo, $emailSubject, $message, $headers);
         echo 'OK';
     }
 }

@@ -205,9 +205,8 @@ $("#send-mail").click(function () {
             });
             error = true; // change the error state to true
         }
-        var name = $('input#name').val(); // get the value of the input field
         var phone = $('input#phone').val(); // get the value of the input field
-        if (phone.length < 10 || phone == "" || phone == " ") {
+        if (phone.length < 10 || phone == "" || phone == " " || phone.length > 15) {
             $('#err-phone').show(500);
             $('#err-phone').delay(4000);
             $('#err-phone').animate({
@@ -260,8 +259,8 @@ $("#send-mail").click(function () {
                         $('#successSend').show();
                         $("#name").val('');
                         $("#email").val('');
-                        $("#phone").val('');
                         $("#comment").val('');
+                        $("#phone").val('');
                     } else {
                         $('#errorSend').show();
                     }

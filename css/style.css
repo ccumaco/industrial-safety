@@ -322,6 +322,15 @@ p {
     padding:10px;
     margin-bottom: 30px;
 }
+
+.texto-centrado strong{
+    font-size: 2.4rem;
+}
+.texto-centrado{
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2.5rem;
+}
 .section .title h1 {
     font-weight: normal;
     margin-bottom: 20px;
@@ -337,6 +346,7 @@ p {
     bottom: 20px;
     left: 20px;
     border-radius: 50%;
+    padding: .3rem;
     background-color: green;
     box-sizing: content-box;
     z-index: 9999;
@@ -359,7 +369,7 @@ p {
     border-radius: 50%;
 }
 .primary-section {
-    background:#071A2B;
+    background:url(./../images/logo-marca-de-agua.jpg) repeat #071A2B;
 }
 .primary-section .triangle {
     border-top: 40px solid #F5A01F;
