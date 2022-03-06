@@ -9,10 +9,10 @@ if (!empty($_POST)){
   $_POST  = multiDimensionalArrayMap('cleanData', $_POST);
 
   //your email adress 
-  $emailTo ="carloscumaco5@gmail.com"; //"yourmail@yoursite.com";
+  $emailTo ="eppindusaf@gmail.com"; //"yourmail@yoursite.com";
 
   //from email adress
-  $emailFrom ="contact@yoursite.com"; //"contact@yoursite.com";
+  $emailFrom ="contact@eppindusaf.com"; //"contact@yoursite.com";
 
   //email subject
   $emailSubject = "EPP industrial Safety";
