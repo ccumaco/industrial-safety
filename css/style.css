@@ -422,7 +422,22 @@ p {
 .third-section {
     padding-bottom: 70px;
     background: #181A1C url(../images/brand-bg.png) no-repeat center;
-    border-top:6px solid #F5A01F;
+    /* border-top:6px solid #F5A01F; */
+}
+
+.text-reglamento{
+    font-weight: 600;
+    color: #000;
+    display: block;
+    padding-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.container-reglamentos{
+    justify-content: center;
+    display: flex;
+    align-items: center;
 }
 .third-section .container {
     padding-top:20px;
@@ -924,6 +939,18 @@ p {
     }
     .newsletter form {
         text-align:center;
+    }
+    .container-reglamentos {
+        flex-wrap: wrap;
+    }
+    .container-reglamentos img{
+        max-width: 50%;
+        margin-right: .5rem;
+    }
+    .button-dropdown, .button-download{
+        width: 100%;
+        float: none;
+        box-sizing: border-box;
     }
 }
 @media (max-width: 767px) {
