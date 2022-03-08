@@ -388,6 +388,16 @@ $("#send-mail").click(function () {
     }, 1000);
 });
 
+let elementFilter = document.getElementsByClassName('filter')
+let textoFiltro = ''
+for (let i = 0; i < elementFilter.length; i++) {
+    const element = elementFilter[i];
+    element.addEventListener('click', function () {
+        textoFiltro = element.innerHTML
+        document.getElementById('htmlFilter').innerHTML = textoFiltro
+    })
+}
+
 //Initialize google map for contact setion with your location.
 
 function initializeMap() {
