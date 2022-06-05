@@ -19,6 +19,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     margin: 10px;
 }
+.banner-saf{
+    width: 100% !important;
+    display: block !important;
+}
+.da-arrows span{
+    opacity:inherit !important;
+}
 p {
     padding: 10px;
     font-weight: 100;
@@ -36,7 +43,14 @@ p {
   position: relative;
   margin: auto;
 }
-
+#portfolio{
+    padding-bottom: 0px;
+}
+.btn-volver, .btn-volver img{
+    color: #f5a01f;
+    font-weight: bold;
+    text-decoration: underline;
+}
 /* Hide the images by default */
 .mySlides {
   display: none;
@@ -412,6 +426,9 @@ p {
 .social li a:hover {
     color:#181A1C;
 }
+.descargar-catalogo{
+    height: 80px;
+}
 /*
 3. Sections 
 ***************************************************************************/
@@ -428,15 +445,40 @@ p {
 }
 .productos-safety{
     display: grid;
-    gap: 20px;
+    gap: 35px;
     grid-auto-flow: dense;
     grid-auto-rows: 299px;
     grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+   
+}
+.productos{
+    background-color: #ffffff;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 3px 5px rgba(219,219,219,0.19); 
+box-shadow: 0px 0px 3px 5px rgba(219,219,219,0.19);
+    border-radius: 5px;
 }
 .section .title img{
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
+}
+.text-product{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight:400;
+    color: #000000;
+    background: rgba(255,255,255,0);
+background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,0)), color-stop(39%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 39%, rgba(255,255,255,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
 }
 .texto-centrado strong{
     font-size: 2.4rem;
@@ -1062,5 +1104,9 @@ p {
     }
     .price-column, .testimonial {
         margin-top:30px;
+    }
+    .da-arrows span{
+        height: 25% !important;
+        top: 50px;
     }
 }
